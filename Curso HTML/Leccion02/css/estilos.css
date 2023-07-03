@@ -1,0 +1,21 @@
+h1{
+    color: yellow;
+}
+
+p{
+    color: white;
+    background-color: gray;
+ 
+    /*Box Model*/
+    padding: 15px;
+    border: 20px solid blue;
+
+    /*
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;*/
+
+    margin: 40px 10px 20px 10px;
+
+}

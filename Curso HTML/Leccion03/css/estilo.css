@@ -1,0 +1,47 @@
+h1{
+color: #fb8500;
+}
+
+/*
+a:link{
+    color: #ffb703;
+    text-decoration: none;
+}
+
+
+a:visited{
+    color: #219ebc;
+    text-decoration: none;
+}
+
+Cuando nos ponemos sobre el Link
+a:hover{
+    color: #8ecae6;
+    text-decoration: underline;
+}
+
+
+Cuando damos Click sobre el Link
+a:active{
+    color: #023047;
+    text-decoration: underline;
+    
+}*/
+
+a:link, a:visited{
+    background-color: #fb8500;
+    padding: 15px 25px;
+    border: black;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    
+}
+
+a:hover, a:active{
+    background-color: blueviolet;
+    padding: 15px 25px;
+    border: black;
+    text-decoration: none;
+    text-align: center;
+}

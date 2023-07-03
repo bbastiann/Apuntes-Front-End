@@ -1,0 +1,41 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    
+}
+
+table{
+    height: 100%;
+}
+
+/*
+td{
+    text-align: center;
+}
+
+th{
+    text-align: left;
+}*/
+
+caption{
+    color: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    line-height: 70px;
+}
+
+th{
+    color: gray;
+    background-color: black;
+}
+
+
+/*Seleccionar Renglones pares (even) o impares (odd)*/ 
+tr:nth-child(even){
+    background-color: antiquewhite;
+}
+
+tr:nth-child(odd){
+    background-color: aquamarine;
+}
