@@ -99,7 +99,7 @@ console.log(main2.parentElement.parentElement);
 
 
 /*
-ParentNode y ParentElement:
+//------------------------ParentNode y ParentElement:
 
 En JavaScript, tanto parentNode como parentElement son propiedades que se utilizan para
 acceder al nodo padre de un elemento en el árbol DOM (Document Object Model). 
@@ -116,7 +116,7 @@ Si no hay un nodo padre de tipo elemento, parentElement devuelve null.
 */
 
 
-//Elementos y Nodos Hijos
+//----------------Elementos y Nodos Hijos
 var itemList3 = document.querySelector('#items');
 
 //ChildNodes
@@ -135,4 +135,16 @@ console.log("fistChild / firstElementChild");
 console.log("lastChild / lastElementChild");
 //console.log(itemList3.lastElementChild);
 
+
+//------------------Elementos Hermanos
+var itemList4 = document.querySelector('#items');
+
+//previousSibling
+console.log(itemList4.previousSibling)
+//previousElementSibling
+console.log(itemList4.previousElementSibling)
+//nextSibling
+console.log(itemList4.nextSibling)
+//nextElementSibling
+console.log(itemList4.nextElementSibling)
 
