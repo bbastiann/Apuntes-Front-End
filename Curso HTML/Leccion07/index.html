@@ -14,6 +14,48 @@
                 <label>Apellido: </label></br>
                 <input type="text" id="apellido" name="apellido" placeholder="Escribe tu Apellido" required="true"></br>
 
+                <label>Password: </label></br>
+                <input type="password" id="password" name="password" required="true"></br>
+
+                <!----Tipo de Dato Email------>
+                <label>Email: </label></br>
+                <input type="email" id="email" name="email"></br>
+
+                <!-----Tipo de Dato Number----->
+                <label>Edad: </label></br>
+                <input type="number" id="edad" name="edad"></br>
+
+                <!-----RadioButton----->
+                <label>Genero</label></br>
+                <input type="radio" id="femenino" name="genero" value="femenino"/>
+                <label for="genero">Femenino</label></br>
+                <input type="radio" id="masculino" name="genero"  value="masculino"/>
+                <label for="genero">Masculino</label></br>
+
+                <!-----CheckBoxes----->
+                <label>Genero Musical Favorito</label></br>
+                <input type="checkbox" name="Clasica" id="musica" value="Clasica"/>
+                <label>Clasica</label></br>
+                <input type="checkbox" name="Rock" id="musica" value="Rock"/>
+                <label>Rock</label></br>
+                <input type="checkbox" name="Jazz" id="musica" value="Jazz"/>
+                <label>Jazz</label></br>
+
+                <!-----Select----->
+                <label for="autos">Marca de Autos Favorita</label><br>
+                <select name="autos" id="autos">
+                    <option value="volvo">Volvo</option>
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                </select><br>
+
+
+                <!-----TextArea----->
+                <label for="comentario">Comentario</label></br>
+                <textarea name="comentario" id="comentario" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facilis, laborum eum ex aspernatur vitae assumenda mollitia maxime est dolorem ipsum totam delectus, quasi voluptatibus consequuntur sed repudiandae ipsam voluptate.
+                </textarea></br>
+
+
                 <input type="submit" value="enviar">
                 <input type="submit" value="enviar sin validar" formnovalidate="formnovalidate">
             </form>
