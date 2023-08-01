@@ -3,9 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+//Importamos el componente creado
+import {componenteComponent} from './components/componente/componente.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    componenteComponent //Importamos nuestro nuevo componente
   ],
   imports: [
     BrowserModule
