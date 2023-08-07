@@ -148,3 +148,19 @@ console.log(itemList4.nextSibling)
 //nextElementSibling
 console.log(itemList4.nextElementSibling)
 
+
+
+//Agregar Eventos
+/*
+document.getElementById('boton').addEventListener('click', function(){
+    console.log('Usted le ha dado click');
+});*/
+
+//O se puede hacer de la siguiente forma
+
+document.getElementById('boton').addEventListener('click', HacerClick);
+
+function HacerClick(){
+    //console.log('Usted le ha dado click');
+    document.getElementById('header-title').textContent = 'Texto Cambiado';
+}
