@@ -157,10 +157,11 @@ document.getElementById('boton').addEventListener('click', function(){
 });*/
 
 //O se puede hacer de la siguiente forma
-
+/*
 document.getElementById('boton').addEventListener('click', HacerClick);
 
 function HacerClick(){
     //console.log('Usted le ha dado click');
     document.getElementById('header-title').textContent = 'Texto Cambiado';
 }
+*/
