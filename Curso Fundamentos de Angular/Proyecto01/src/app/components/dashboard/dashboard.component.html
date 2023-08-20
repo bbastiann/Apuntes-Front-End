@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<h1>Este es mi Ejemplo</h1>
+<div class="container">
+<h1>{{ titulo }}</h1>
+<!--------------Property Binging-------->
+<img [src]="urlImage" width="600px" height="600"> <br/>
+
+    <input type="text" [placeholder]="textoPlaceHolder" [disabled]="isDisabled">
+    <br/>
+    <!---------------Event Binding-->
+    <button (click)="cambiarTexto()">Click me</button>
+</div>
+
+
+
+
