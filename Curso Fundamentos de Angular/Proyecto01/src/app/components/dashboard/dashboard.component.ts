@@ -15,6 +15,13 @@ export class DashboardComponent implements OnInit{
   //Variables de Event Binding
   titulo: string;
 
+  //Comunicacion entre Componentes 
+  //Padre-Hijo
+  componenteTitle: string;
+  
+  //Hijo-Padre
+  textoPadre: string;
+
   constructor() {
     this.urlImage = "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png";
     this.textoPlaceHolder = "Escribe Aqui.....";
@@ -23,6 +30,12 @@ export class DashboardComponent implements OnInit{
     //Variables de Event Binding
     this.titulo = "Event Binding"
 
+    //Comunicacion entre Componentes 
+    this.componenteTitle = "Este es un componente hijo";
+
+    this.textoPadre = "Texto del Padre";
+
+  
   }
 
 
@@ -34,5 +47,11 @@ export class DashboardComponent implements OnInit{
 
   cambiarTexto(): void{
     this.titulo = "Esto es Event Binding";
+    this.componenteTitle = "El texto del componente hijo a sido cambiado"
   }
+
+  cambiarTextoDelPadre(nuevoTexto: string): void{
+    this.textoPadre = nuevoTexto;
+  }
+  
 }

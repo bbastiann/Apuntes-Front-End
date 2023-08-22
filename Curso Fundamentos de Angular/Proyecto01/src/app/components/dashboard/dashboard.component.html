@@ -8,6 +8,15 @@
     <br/>
     <!---------------Event Binding-->
     <button (click)="cambiarTexto()">Click me</button>
+
+    
+</div>
+
+<div>
+    <h1>Comunicacion entre Componentes</h1>
+    <br/>
+    <h1>{{ textoPadre }}</h1>
+    <app-card app-card [textCard]="componenteTitle" (nuevoEvento)="cambiarTextoDelPadre($event)"></app-card>
 </div>
 
 

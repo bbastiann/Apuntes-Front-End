@@ -8,6 +8,7 @@ import {componenteComponent} from './components/componente/componente.component'
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardComponent } from './components/dashboard/card/card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
     componenteComponent, //Componente que creamos 
     NavbarComponent,
     DashboardComponent,
-    FooterComponent 
+    FooterComponent,
+    CardComponent 
   ],
   imports: [
     BrowserModule
