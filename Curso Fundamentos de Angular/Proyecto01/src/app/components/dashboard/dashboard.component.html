@@ -16,7 +16,7 @@
     <h1>Comunicacion entre Componentes</h1>
     <br/>
     <h1>{{ textoPadre }}</h1>
-    <app-card app-card [textCard]="componenteTitle" (nuevoEvento)="cambiarTextoDelPadre($event)"></app-card>
+    <app-card app-card [textCard]="componenteTitle" (nuevoEvento)="cambiarTextoDelPadre($event)" [(nuevoTextoTwoWay)]="textoTwoWay"></app-card>
 </div>
 
 

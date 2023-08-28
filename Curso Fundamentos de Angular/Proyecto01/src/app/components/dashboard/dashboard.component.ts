@@ -22,6 +22,9 @@ export class DashboardComponent implements OnInit{
   //Hijo-Padre
   textoPadre: string;
 
+   //Two-Way Data Binding
+   textoTwoWay: string;
+
   constructor() {
     this.urlImage = "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png";
     this.textoPlaceHolder = "Escribe Aqui.....";
@@ -34,6 +37,10 @@ export class DashboardComponent implements OnInit{
     this.componenteTitle = "Este es un componente hijo";
 
     this.textoPadre = "Texto del Padre";
+
+   //Two-Way Data Binding
+   this.textoTwoWay = "Antiguo Texto Two-Way";
+
 
   
   }

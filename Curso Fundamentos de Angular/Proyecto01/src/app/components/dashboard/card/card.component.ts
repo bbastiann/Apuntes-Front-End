@@ -15,6 +15,11 @@ export class CardComponent {
 //Hijo - Padre
 @Output() nuevoEvento = new EventEmitter<string>(); 
 
+
+//two-way data binding
+@Input() nuevoTextoTwoWay!: string; //! indica que esta propiedad no puede ser Null o Undefined
+@Output() nuevoTextoTwoWayChange = new EventEmitter<string>(); //Como buena practica es bueno que nuestro Output tenga la palabra Change
+
   constructor() {
 
     this.textCard = "";
@@ -25,5 +30,10 @@ export class CardComponent {
   CambiarTextoPadre(): void{
     this.nuevoEvento.emit("Este es el nuevo Texto Padre");
   }  
+
+  //two-way data binding
+  cambiarTextoTwoWay(): void{
+    this.nuevoTextoTwoWayChange.emit("Este es el nuevo Texto Padre por Two Way Data binding");
+  }
 
 }
