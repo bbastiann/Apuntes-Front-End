@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit{
 
+
   //Variable de Property binging
   urlImage: string;
   textoPlaceHolder: string;
@@ -25,6 +26,9 @@ export class DashboardComponent implements OnInit{
    //Two-Way Data Binding
    textoTwoWay: string;
 
+   //DIRECTIVAS:
+  listaUsuarios: any[];
+
   constructor() {
     this.urlImage = "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png";
     this.textoPlaceHolder = "Escribe Aqui.....";
@@ -41,12 +45,23 @@ export class DashboardComponent implements OnInit{
    //Two-Way Data Binding
    this.textoTwoWay = "Antiguo Texto Two-Way";
 
+    //DIRECTIVAS:
+   this.listaUsuarios = [
+    {nombre: "Pedro", edad: "25", sexo: "M"},
+    {nombre: "Maria", edad: "15", sexo: "F"},
+    {nombre: "Juan", edad: "35", sexo: "M"},
+    {nombre: "Fernanda", edad: "20", sexo: "F"},
+    {nombre: "Juan", edad: "10", sexo: "M"},
+   ]
 
   
   }
 
 
-  ngOnInit(): void{}
+  ngOnInit(): void{
+
+    
+  }
 
   getURL(): string{
     return this.urlImage = "Alejandro";
@@ -60,5 +75,5 @@ export class DashboardComponent implements OnInit{
   cambiarTextoDelPadre(nuevoTexto: string): void{
     this.textoPadre = nuevoTexto;
   }
-  
+
 }

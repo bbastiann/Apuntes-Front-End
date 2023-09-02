@@ -1,12 +1,17 @@
+<!------
 <h1>Este es mi Ejemplo</h1>
 <div class="container">
 <h1>{{ titulo }}</h1>
+---->
 <!--------------Property Binging-------->
+<!------
 <img [src]="urlImage" width="600px" height="600"> <br/>
 
     <input type="text" [placeholder]="textoPlaceHolder" [disabled]="isDisabled">
     <br/>
+    ---->
     <!---------------Event Binding-->
+    <!------
     <button (click)="cambiarTexto()">Click me</button>
 
     
@@ -18,7 +23,16 @@
     <h1>{{ textoPadre }}</h1>
     <app-card app-card [textCard]="componenteTitle" (nuevoEvento)="cambiarTextoDelPadre($event)" [(nuevoTextoTwoWay)]="textoTwoWay"></app-card>
 </div>
+---->
 
-
+<div class="container">
+    <h1>Lista de Usuarios</h1>
+    <br>
+    <div class="row">
+       <div class="col-md-6" *ngFor="let usuario of listaUsuarios">
+        <app-card [User]="usuario"></app-card>
+       </div>
+    </div>
+</div>
 
 

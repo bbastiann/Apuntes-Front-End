@@ -1,7 +1,25 @@
+<!-------
 <H1>{{ textCard }}</H1>
+---->
 <!----------Comunicacion Hijo - Padre-->
+<!-------
 <button (click)="CambiarTextoPadre()">Cambiar Elemento Padre!</button>
 <br>
+---->
 <!----------Two-Way Data Binding------>
+<!-------
 <input type="text" [value]="nuevoTextoTwoWay">
 <button (click)="cambiarTextoTwoWay()">Boton Two Way Data Binding</button>
+---->
+
+<div class="card" style="width: 18rem;">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">{{nombre}}</h5>
+      <p class="card-text">
+        {{edad}}
+        <br>
+        {{sexo}}
+      </p>
+    </div>
+</div>
