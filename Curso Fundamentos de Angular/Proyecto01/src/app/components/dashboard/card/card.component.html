@@ -17,9 +17,12 @@
     <div class="card-body">
       <h5 class="card-title">{{nombre}}</h5>
       <p class="card-text">
-        {{edad}}
+          {{edad}}        
         <br>
-        {{sexo}}
+        <span [ngStyle]= "{'color': sexo == 'M' ? 'red' : 'blue'}">
+          {{sexo}}
+        </span>
+        
       </p>
     </div>
 </div>
