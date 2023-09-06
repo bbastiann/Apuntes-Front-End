@@ -19,9 +19,12 @@
       <p class="card-text">
           {{edad}}        
         <br>
-        <span [ngStyle]= "{'color': sexo == 'M' ? 'red' : 'blue'}">
-          {{sexo}}
-        </span>
+        <!-------<span [ngStyle]= "{'color': sexo == 'M' ? 'red' : 'blue'}">------------>
+          <span [ngClass]="sexo == 'M' ? 'badge bg-dark' : 'badge bg-light' ">
+            {{sexo}}
+          </span>
+          
+        
         
       </p>
     </div>
