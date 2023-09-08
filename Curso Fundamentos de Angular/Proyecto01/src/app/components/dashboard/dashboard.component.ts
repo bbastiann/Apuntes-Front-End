@@ -26,8 +26,11 @@ export class DashboardComponent implements OnInit{
    //Two-Way Data Binding
    textoTwoWay: string;
 
+   textoejemplo: string;
+
    //DIRECTIVAS:
   listaUsuarios: any[];
+  
 
   constructor() {
     this.urlImage = "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png";
@@ -44,6 +47,9 @@ export class DashboardComponent implements OnInit{
 
    //Two-Way Data Binding
    this.textoTwoWay = "Antiguo Texto Two-Way";
+
+
+   this.textoejemplo = "";
 
     //DIRECTIVAS:
    this.listaUsuarios = [
