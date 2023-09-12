@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -31,8 +32,8 @@ export class DashboardComponent implements OnInit{
    //DIRECTIVAS:
   listaUsuarios: any[];
   
-
-  constructor() {
+  //Servicio: inyectamos el servivio en el constructor.
+  constructor(private usuarioService: UsuarioService) {
     this.urlImage = "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png";
     this.textoPlaceHolder = "Escribe Aqui.....";
     this.isDisabled = false;
@@ -80,6 +81,12 @@ export class DashboardComponent implements OnInit{
 
   cambiarTextoDelPadre(nuevoTexto: string): void{
     this.textoPadre = nuevoTexto;
+  }
+
+
+  //Servicios: de Dashboard a Servicio Usuario
+  onChange(evento: string): void {
+    this.usuarioService.modificarTexto(this.textoejemplo); //Usamos el textoejemplo del ngModel
   }
 
 }
