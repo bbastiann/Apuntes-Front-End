@@ -6,6 +6,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
 export class DashboardComponent implements OnInit{
 
 
@@ -30,10 +31,19 @@ export class DashboardComponent implements OnInit{
    textoejemplo: string;
 
    //DIRECTIVAS:
-  listaUsuarios: any[];
+  listaUsuarios: any;
   
   //Servicio: inyectamos el servivio en el constructor.
   constructor(private usuarioService: UsuarioService) {
+    //Peticiones HTTP
+    this.usuarioService.getUsusario().subscribe((data: any) => {
+      console.log(data);
+      this.listaUsuarios = data.data;
+      console.log(this.listaUsuarios);
+      
+    });
+
+
     this.urlImage = "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png";
     this.textoPlaceHolder = "Escribe Aqui.....";
     this.isDisabled = false;
@@ -52,7 +62,8 @@ export class DashboardComponent implements OnInit{
 
    this.textoejemplo = "";
 
-    //DIRECTIVAS:
+   /*
+  //DIRECTIVAS:
    this.listaUsuarios = [
     {nombre: "Pedro", edad: "25", sexo: "M"},
     {nombre: "Maria", edad: "15", sexo: "F"},
@@ -60,8 +71,9 @@ export class DashboardComponent implements OnInit{
     {nombre: "Fernanda", edad: "20", sexo: "F"},
     {nombre: "Juan", edad: "10", sexo: "M"},
    ]
-
+   */
   
+      
   }
 
 
@@ -74,6 +86,7 @@ export class DashboardComponent implements OnInit{
     return this.urlImage = "Alejandro";
   }
 
+  /*
   cambiarTexto(): void{
     this.titulo = "Esto es Event Binding";
     this.componenteTitle = "El texto del componente hijo a sido cambiado"
@@ -82,11 +95,11 @@ export class DashboardComponent implements OnInit{
   cambiarTextoDelPadre(nuevoTexto: string): void{
     this.textoPadre = nuevoTexto;
   }
-
-
+*/
+  /*
   //Servicios: de Dashboard a Servicio Usuario
   onChange(evento: string): void {
     this.usuarioService.modificarTexto(this.textoejemplo); //Usamos el textoejemplo del ngModel
   }
-
+  */
 }

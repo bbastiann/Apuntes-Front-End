@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
+import {HttpClientModule} from '@angular/common/http'
+
 //Importamos el componente creado
 import {componenteComponent} from './components/componente/componente.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -24,7 +26,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

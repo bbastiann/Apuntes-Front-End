@@ -25,8 +25,8 @@ export class CardComponent {
 
   @Input() User: any;
   nombre: string;
-  edad: string;
-  sexo: string; 
+  email: string;
+  gender: string; 
 
   constructor() {
 
@@ -35,14 +35,14 @@ export class CardComponent {
     //Directivas
 
     this.nombre = '';
-    this.edad = '';
-    this.sexo = '';
+    this.email = '';
+    this.gender = '';
   }
 
   ngOnInit(){
     this.nombre = this.User.nombre;
-    this.edad = this.User.edad;
-    this.sexo = this.User.sexo;
+    this.email = this.User.email;
+    this.gender = this.User.gender;
 
   }
   //Metodo que utilizaremos para la comunicacion Hijo - Padre

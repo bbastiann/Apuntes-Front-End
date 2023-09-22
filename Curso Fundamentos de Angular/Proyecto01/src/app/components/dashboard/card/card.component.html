@@ -16,17 +16,18 @@
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body">
       <h5 class="card-title">{{nombre}}</h5>
-      <p class="card-text" [ngSwitch]="sexo">
-          {{edad}}        
+      <p class="card-text" [ngSwitch]="email">
+          {{email}}        
         <br>
+          {{gender}}
         <!-------<span [ngStyle]= "{'color': sexo == 'M' ? 'red' : 'blue'}">------------>
          <!-------  <span [ngClass]="sexo == 'M' ? 'badge bg-dark' : 'badge bg-light' ">------------>
-          <span *ngSwitchCase="'M'" class="badge bg-dark">
+          <!-------<span *ngSwitchCase="'M'" class="badge bg-dark">
             {{sexo}}
           </span>
           <span *ngSwitchCase="'F'" class="badge bg-primary">
             {{sexo}}
-          </span>
+          </span>----------->
           
         
         

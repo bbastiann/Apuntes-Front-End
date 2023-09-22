@@ -8,14 +8,15 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class InicioComponent {
 
-  textoinicio: string;
+  //textoinicio: string;
 
   //inyectamos el Servicio Usuario en nuestro constructor
   constructor(private usuarioService: UsuarioService){
 
+    /*
     this.textoinicio = "";
     this.usuarioService.getTexto().subscribe(data =>{
       this.textoinicio = data;
-    });
+    });*/
   }
 }
