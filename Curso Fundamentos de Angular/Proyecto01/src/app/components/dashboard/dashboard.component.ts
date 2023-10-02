@@ -35,10 +35,11 @@ export class DashboardComponent implements OnInit{
   
   //Servicio: inyectamos el servivio en el constructor.
   constructor(private usuarioService: UsuarioService) {
+    
     //Peticiones HTTP
-    this.usuarioService.getUsusario().subscribe((data: any) => {
+    this.usuarioService.getUsusario().subscribe(data => {
       console.log(data);
-      this.listaUsuarios = data.data;
+      this.listaUsuarios = data;
       console.log(this.listaUsuarios);
       
     });

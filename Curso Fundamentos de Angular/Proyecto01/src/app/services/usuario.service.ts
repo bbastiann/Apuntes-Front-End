@@ -25,7 +25,7 @@ export class UsuarioService {
   */
 
   getUsusario(): Observable<any>{
-    const url = "https://gorest.co.in/public/v2/users";
-    return this.http.get(url)
+    const URL = "https://gorest.co.in/public/v2/users";
+    return this.http.get(URL)
   }
 }

@@ -32,7 +32,7 @@
     <!------<app-inicio></app-inicio>------------->
     <br>
     <div class="row">
-       <div class="col-md-6" *ngFor="let usuario of listaUsuarios">
+       <div *ngFor="let usuario of listaUsuarios" class="col-md-4">
         <app-card [User]="usuario"></app-card>
        </div>
     </div>
