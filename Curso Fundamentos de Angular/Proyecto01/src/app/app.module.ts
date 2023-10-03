@@ -16,6 +16,8 @@ import { CardComponent } from './components/dashboard/card/card.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ListadoUsuariosComponent } from './components/dashboard/listado-usuarios/listado-usuarios.component';
+import { UsuarioComponent } from './components/dashboard/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     FooterComponent,
     CardComponent,
     InicioComponent,
-    PageNotFoundComponent 
+    PageNotFoundComponent,
+    ListadoUsuariosComponent,
+    UsuarioComponent 
   ],
   imports: [
     BrowserModule,

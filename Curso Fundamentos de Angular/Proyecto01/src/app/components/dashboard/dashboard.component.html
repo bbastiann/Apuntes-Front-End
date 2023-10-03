@@ -31,11 +31,9 @@
     <!------<h2>{{textoejemplo}}</h2>-------------->
     <!------<app-inicio></app-inicio>------------->
     <br>
-    <div class="row">
-       <div *ngFor="let usuario of listaUsuarios" class="col-md-4">
-        <app-card [User]="usuario"></app-card>
-       </div>
-    </div>
+    <!------<app-listado-usuarios></app-listado-usuarios>---------->
+    <router-outlet></router-outlet>
+    
 </div>
 
 
