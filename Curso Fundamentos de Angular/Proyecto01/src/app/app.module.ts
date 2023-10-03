@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +14,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/dashboard/card/card.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,14 @@ import { InicioComponent } from './components/inicio/inicio.component';
     DashboardComponent,
     FooterComponent,
     CardComponent,
-    InicioComponent 
+    InicioComponent,
+    PageNotFoundComponent 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
