@@ -14,11 +14,11 @@ export class ListadoUsuariosComponent {
   constructor(private usuarioService: UsuarioService) {
     
     //Peticiones HTTP
-    this.usuarioService.getUsusario().subscribe(data => {
-      console.log(data);
+    this.usuarioService.getUsusarios().subscribe(data => {
+      //console.log(data);
       this.listaUsuarios = data;
-      console.log(this.listaUsuarios);
-      
+      //console.log(this.listaUsuarios);
+    
     });
   }
 }

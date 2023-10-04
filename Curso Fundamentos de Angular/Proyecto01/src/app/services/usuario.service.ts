@@ -24,8 +24,16 @@ export class UsuarioService {
   }
   */
 
-  getUsusario(): Observable<any>{
+  getUsusarios(): Observable<any>{
     const URL = "https://gorest.co.in/public/v2/users";
+    return this.http.get(URL)
+  }
+
+
+  //Creamos un metodo para recibir la informacion de un usuario en especifico
+  //con su ID
+  getUsusario(id: any): Observable<any>{
+    const URL = "https://gorest.co.in/public/v2/users/" + id;
     return this.http.get(URL)
   }
 }

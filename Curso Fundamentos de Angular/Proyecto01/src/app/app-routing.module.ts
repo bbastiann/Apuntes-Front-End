@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'Dashboard', component: DashboardComponent, children: [
         {path: '', component: ListadoUsuariosComponent},
-        {path: 'usuario', component: UsuarioComponent}
+        {path: 'usuario/:id', component: UsuarioComponent}
   ]},
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent} // el ** significa cualquier otra cosa
