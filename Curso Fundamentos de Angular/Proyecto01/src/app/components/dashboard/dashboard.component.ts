@@ -36,13 +36,13 @@ export class DashboardComponent implements OnInit{
   //Servicio: inyectamos el servivio en el constructor.
   constructor(private usuarioService: UsuarioService) {
     
-    //Peticiones HTTP
+    /*//Peticiones HTTP
     this.usuarioService.getUsusarios().subscribe(data => {
       //console.log(data);
       this.listaUsuarios = data;
       //console.log(this.listaUsuarios);
       
-    });
+    });*/
 
 
     this.urlImage = "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png";

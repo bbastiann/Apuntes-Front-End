@@ -46,7 +46,7 @@ export class CardComponent {
   }
 
   ngOnInit(){
-    this.nombre = this.User.nombre;
+    this.nombre = this.User.name;
     this.email = this.User.email;
     this.gender = this.User.gender;
     this.status = this.User.status;

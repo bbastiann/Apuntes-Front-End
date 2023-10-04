@@ -15,10 +15,8 @@ export class ListadoUsuariosComponent {
     
     //Peticiones HTTP
     this.usuarioService.getUsusarios().subscribe(data => {
-      //console.log(data);
       this.listaUsuarios = data;
-      //console.log(this.listaUsuarios);
-    
+      console.log("data es " + data);
     });
   }
 }
