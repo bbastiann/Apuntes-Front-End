@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -9,39 +10,46 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class UsuarioComponent implements OnInit{
 
-  id: string;
+  
 
   //Creamos las variables para suscribirnos al servicio 
   nombre: string;
   email: string;
   genero: string;
   status: string;
+  id: string;
 
   //inyectamos en nuestro constructor aRoute y nuestro servicio UsuarioService
   constructor(private aRoute: ActivatedRoute,
-     private usuarioService: UsuarioService){
+    private usuarioService: UsuarioService){
 
-      this.nombre = "";
-      this.email = "";
-      this.genero = "";
-      this.status = "";
-    
+     this.nombre = "";
+     this.email = "";
+     this.genero = "";
+     this.status = "";
+     this.id = "";
+   
+     this.aRoute.queryParamMap.pipe(filter(params => params.has('id'))).subscribe(params =>{
+       // Obtenemos el valor del parámetro `id` usando el método `get()`
+       const id = params.get('id');
 
-      /*Esta línea de código obtiene el valor del parámetro de ruta "id" 
-      de la URL actual en Angular y lo asigna a la propiedad "id" del objeto 
-      actual, asumiendo que siempre habrá un valor válido para "id" en la URL.*/
-      this.id = this.aRoute.snapshot.paramMap.get('id')!;
-      console.log("id es " + this.id);
+       // Comprobamos si el valor del parámetro `id` no es nulo
+       if (id !== null) {
+         // El valor del parámetro `id` no es nulo, así que podemos asignarlo a nuestra variable `id`
+         this.id = id;
 
-      //nos suscribimos al servicio
-      this.usuarioService.getUsusario(this.id).subscribe(data => {
-          this.nombre = data.name;
-          this.email = data.email;
-          this.genero = data.gender;
-          this.status = data.status;
-      });
-      
-  }
+         // Nos suscribimos al servicio para obtener el usuario
+         this.usuarioService.getUsusario(this.id).subscribe(data => {
+           this.nombre = data.name;
+           this.email = data.email;
+           this.genero = data.gender;
+           this.status = data.status;
+         });
+       }
+     });
+     
+ }
+
   ngOnInit(): void {
 
   }

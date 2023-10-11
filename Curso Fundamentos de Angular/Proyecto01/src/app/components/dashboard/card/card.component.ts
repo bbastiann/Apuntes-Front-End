@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -32,7 +33,8 @@ export class CardComponent {
   //Parametros en la URL
   id: number;
 
-  constructor() {
+  //Pasar parametros por URL con Event Binding- Inyectamos private router: Router
+  constructor(private router: Router) {
 
     this.textCard = "";
 
@@ -61,6 +63,13 @@ export class CardComponent {
   //two-way data binding
   cambiarTextoTwoWay(): void{
     this.nuevoTextoTwoWayChange.emit("Este es el nuevo Texto Padre por Two Way Data binding");
+  }
+
+  //Pasar parametros por URL con Event Binding
+  verDetalles(): void{
+    alert("Usted va a ver los detalles");
+    this.router.navigate(['Dashboard/usuario'], {
+        queryParams: {id: this.id}});
   }
 
 }
