@@ -1,39 +1,6 @@
-<!------
-<h1>Este es mi Ejemplo</h1>
-<div class="container">
-<h1>{{ titulo }}</h1>
----->
-<!--------------Property Binging-------->
-<!------
-<img [src]="urlImage" width="600px" height="600"> <br/>
-
-    <input type="text" [placeholder]="textoPlaceHolder" [disabled]="isDisabled">
-    <br/>
-    ---->
-    <!---------------Event Binding-->
-    <!------
-    <button (click)="cambiarTexto()">Click me</button>
-
-    
-</div>
-
-<div>
-    <h1>Comunicacion entre Componentes</h1>
-    <br/>
-    <h1>{{ textoPadre }}</h1>
-    <app-card app-card [textCard]="componenteTitle" (nuevoEvento)="cambiarTextoDelPadre($event)" [(nuevoTextoTwoWay)]="textoTwoWay"></app-card>
-</div>
----->
 
 <div class="container">
-    <h1>Lista de Usuarios</h1>
-    <!------<input type="text" [(ngModel)]="textoejemplo" (ngModelChange)="onChange($event)">----------->
-    <!------<h2>{{textoejemplo}}</h2>-------------->
-    <!------<app-inicio></app-inicio>------------->
-    <br>
-    <!------<app-listado-usuarios></app-listado-usuarios>---------->
     <router-outlet></router-outlet>
-    
 </div>
 
 

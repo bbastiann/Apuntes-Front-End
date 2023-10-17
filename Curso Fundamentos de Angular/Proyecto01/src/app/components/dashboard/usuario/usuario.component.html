@@ -1,10 +1,6 @@
 <Div class="container">
-    {{ this.nombre }}
-    <br>
-    {{ this.email }}
-    <br>
-    {{ this.genero }}
-    <br>
-    {{ this.status }}
-    <br>
+    <h1> <span class="titulo">Nombre: </span> {{ this.nombre }}</h1>
+    <h2><span class="titulo">Email: </span> {{ this.email }}</h2>
+    <h2><span class="titulo">Genero: </span> {{ this.genero }}</h2>
+    <h2><span class="titulo">Status: </span> <span [ngStyle]="{ 'color': this.status == 'active' ? 'green' : 'red' }"  > {{ this.status }}  </span></h2>
 </Div>
