@@ -67,7 +67,7 @@ export class CardComponent {
 
   //Pasar parametros por URL con Event Binding
   verDetalles(): void{
-    alert("Usted va a ver los detalles");
+    //alert("Usted va a ver los detalles");
     this.router.navigate(['Dashboard/usuario'], {
         queryParams: {id: this.id}});
   }

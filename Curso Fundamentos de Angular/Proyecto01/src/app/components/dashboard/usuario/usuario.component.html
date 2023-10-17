@@ -1,7 +1,9 @@
-<Div class="container">
+<app-spinner *ngIf="cargando"></app-spinner>
+<div *ngIf="!cargando">
     <h1> <span class="titulo">Nombre: </span> {{ this.nombre }}</h1>
     <h2><span class="titulo">Email: </span> {{ this.email }}</h2>
     <h2><span class="titulo">Genero: </span> {{ this.genero }}</h2>
     <h2><span class="titulo">Status: </span> <span [ngStyle]="{ 'color': this.status == 'active' ? 'green' : 'red' }"  > {{ this.status }}  </span></h2>
-    <button class="btn btn-lg btn-primary mb-4" routerLink="/Dashboard"> Volver </button>
-</Div>
+</div> 
+<button class="btn btn-lg btn-primary mb-4" routerLink="/Dashboard"> Volver </button>
+

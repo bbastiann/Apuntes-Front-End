@@ -19,6 +19,8 @@ export class UsuarioComponent implements OnInit{
   status: string;
   id: string;
 
+  cargando: boolean;
+
   //inyectamos en nuestro constructor aRoute y nuestro servicio UsuarioService
   constructor(private aRoute: ActivatedRoute,
     private usuarioService: UsuarioService){
@@ -28,6 +30,7 @@ export class UsuarioComponent implements OnInit{
      this.genero = "";
      this.status = "";
      this.id = "";
+     this.cargando = true;
    
      this.aRoute.queryParamMap.pipe(filter(params => params.has('id'))).subscribe(params =>{
        // Obtenemos el valor del parámetro `id` usando el método `get()`
@@ -44,6 +47,7 @@ export class UsuarioComponent implements OnInit{
            this.email = data.email;
            this.genero = data.gender;
            this.status = data.status;
+           this.cargando = false;
          });
        }
      });

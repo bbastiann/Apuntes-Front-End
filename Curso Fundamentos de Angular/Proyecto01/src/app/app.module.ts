@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ListadoUsuariosComponent } from './components/dashboard/listado-usuarios/listado-usuarios.component';
 import { UsuarioComponent } from './components/dashboard/usuario/usuario.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UsuarioComponent } from './components/dashboard/usuario/usuario.compone
     InicioComponent,
     PageNotFoundComponent,
     ListadoUsuariosComponent,
-    UsuarioComponent 
+    UsuarioComponent,
+    SpinnerComponent 
   ],
   imports: [
     BrowserModule,

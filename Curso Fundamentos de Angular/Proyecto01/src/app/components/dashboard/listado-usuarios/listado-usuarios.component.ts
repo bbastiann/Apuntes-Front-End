@@ -9,14 +9,18 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class ListadoUsuariosComponent {
   
   listaUsuarios: any;
+  cargando: boolean;
   
   //Servicio: inyectamos el servivio en el constructor.
   constructor(private usuarioService: UsuarioService) {
-    
+    this.cargando = true;
     //Peticiones HTTP
     this.usuarioService.getUsusarios().subscribe(data => {
+      this.cargando = false;
       this.listaUsuarios = data;
-      console.log("data es " + data);
+      //console.log("data es " + data);
     });
+
+    
   }
 }
