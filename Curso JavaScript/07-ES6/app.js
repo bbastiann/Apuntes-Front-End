@@ -35,3 +35,21 @@ function Prueba2(){
 Prueba2();
 console.log("La variable en ES6 es: " + test2);
 
+
+//TEMPLATE STRINGS
+
+let nombre = 'Pablo';
+let apellido = 'Gutierrez';
+const ciudad = 'Santiago';
+const nacimiento = 1985;
+
+function CalcularEdad(year){
+    return 2023 - year;
+}
+
+//ES5
+console.log(nombre +' '+ apellido +', nacio en ' + ciudad +', y su edad es ' + CalcularEdad(nacimiento));
+
+//ES6
+console.log(`${nombre} ${apellido}, nacio en ${ciudad}, y su edad es ${CalcularEdad(nacimiento)}`);
+
