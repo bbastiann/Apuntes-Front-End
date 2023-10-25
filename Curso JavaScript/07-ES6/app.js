@@ -53,3 +53,14 @@ console.log(nombre +' '+ apellido +', nacio en ' + ciudad +', y su edad es ' + C
 //ES6
 console.log(`${nombre} ${apellido}, nacio en ${ciudad}, y su edad es ${CalcularEdad(nacimiento)}`);
 
+
+//NUEVOS METODOS PARA CADENAS ES6
+
+let nombreCompleto = `${nombre} ${apellido}`;
+console.log(nombreCompleto);
+console.log(`${nombre} `.repeat(5)); //Repite 5 veces el valor 
+console.log(nombreCompleto.includes('blo ')); //Devuelve true o false si una cadena esta dentro del texto
+console.log(nombreCompleto.startsWith('Pa')) //Devuelve true o false si el comienzo de una cadena es igual al parametro que le estoy pasando
+console.log(nombreCompleto.endsWith('rrez')) //Devuelve true o false si el final de una cadena es igual al parametro que le estoy pasando
+
+
