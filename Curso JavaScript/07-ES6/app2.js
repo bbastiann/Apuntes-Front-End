@@ -28,3 +28,49 @@ edad6 = years.map(
 )
 
 console.log(edad6);
+
+
+//Funcion ES5
+function cuadrado(num){
+    return num * num;
+}
+
+console.log(cuadrado(5));
+
+//Funcion ES6
+
+const cuadradoES6 = (numES6) => {
+    return numES6 * numES6;
+}
+
+console.log(cuadradoES6(3));
+
+
+const personas = [
+    {
+        nombre: 'Pablo',
+        edad: 25
+    },
+    {
+        nombre: 'Fernando',
+        edad: 36
+    },
+    {
+        nombre: 'Angie',
+        edad: 18
+    },
+]
+
+//Buscar los menores a 30
+/*
+const menores30 = personas.filter(function(personas){
+    return personas.edad < 30;
+});
+
+console.log(menores30);
+*/
+//Buscar los menores a 30 con ES6
+
+const menores30 = personas.filter((personas) => personas.edad < 30);
+
+console.log(menores30);
