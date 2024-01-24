@@ -42,15 +42,19 @@ console.log(persona2.GetBiografia());
 //Una subclase es una clase hija de la clase padre
 
 class Empleado extends Persona{
-        constructor(nombre, edad, profesiones = [], sueldo, pusto){
+        constructor(nombre, edad, profesiones = [], sueldo, puesto){
             super(nombre, edad, profesiones); //necesitamos acceder al constructor de la clase padre para pasar los parametros usando 'super'
             this.sueldo = sueldo;
             this.puesto = puesto;
         }
+
+        GetBiografia(){
+            return super.GetBiografia() + ` Puesto: ${this.puesto}, Salario: ${this.sueldo}.`;
+        }
 }
 
-const empleado1 = new Persona('Bastian', 29, ['Ingeniero Civil Informatico'], 15000, 'ingenieria');
-const empleado2 = new Persona('Ignacio', 29, ['Ingeniero Civil Informatico'], 10000, 'RRHH');
+const empleado1 = new Empleado('Bastian', 29, ['Ingeniero Civil Informatico'], 15000, 'Ingenieria');
+const empleado2 = new Empleado('Ignacio', 29, ['Ingeniero Civil Informatico'], 10000, 'RRHH');
 
 console.log(empleado1.GetBiografia());
 console.log(empleado2.GetBiografia());
